@@ -1,50 +1,27 @@
-# María Fernanda Molina Ron Portfolio Preview V4
+# María Fernanda Molina Ron — Portfolio
 
-This is the lighter visual direction for the portfolio. It keeps the same static HTML, CSS and vanilla JavaScript architecture, with Leaflet for the hero map.
+Personal portfolio showcasing selected work in data analysis, geospatial analytics, remote sensing, machine learning, and GIS software development.
 
-## Preview in Firefox
+## Live Website
 
-1. Extract the ZIP.
-2. Open the extracted folder.
-3. Double-click `index.html`.
-4. Keep an internet connection active so the web fonts and Leaflet map tiles can load.
-5. In Firefox, press `Ctrl + Shift + M` to test phone and tablet widths.
+Once GitHub Pages is enabled, the portfolio will be available at:
 
-## V3 changes
+https://fernandamolina22.github.io/
 
-- Replaced the almost-black visual system with an off-white, pale teal and warm neutral palette.
-- Kept a dark footer for contrast.
-- Added a portrait placeholder in the About section.
-- Changed the personal section to three future photo slots: soccer, hiking and singing.
-- Updated teaching experience to 140+ students per year.
-- Added Institut Polytechnique de Paris and a link to the GenHack page.
-- Made the three top proof items use a consistent title, institution/project and place pattern.
-- Removed the generic introductory sentences from Capabilities and Experience.
-- Simplified the language section and Italian note.
-- Updated the LinkedIn URL.
-- Removed the three CV download placeholders. A single general CV can be added later only if desired.
-- Final project media, PDFs and missing project links are still intentionally pending.
+## Featured Work
 
-## Future media structure
+- Topology-aware road extraction from Sentinel-2 imagery using U-Net
+- Urban Heat Island analysis — GenHack 2025
+- City similarity analysis and interactive WebGIS
+- QGIS plugin development for GIS modernization
+- Avalanche susceptibility and exposure assessment
 
-```text
-media/
-  profile/
-    portrait.jpg
-  projects/
-    thesis/
-    genhack/
-    mobility/
-    avalanche/
-    gis-software/
-  hobbies/
-    soccer.jpg
-    hiking.jpg
-    singing.jpg
-  icons/
-```
+## Technologies
 
+HTML, CSS, JavaScript, Leaflet, Python, PyTorch, QGIS, PyQGIS, remote sensing, and geospatial data analysis.
 
-## V4 personal media
+## About
 
-The About portrait and the Soccer, Hiking and Singing images are now integrated in `media/profile/` and `media/hobbies/`. The CSS uses `object-fit: cover` and per-image `object-position` values so the original files can remain uncropped.
+I am an MSc candidate in Geoinformatics Engineering at Politecnico di Milano with a background in Information Technology Engineering. My work combines data analysis with geospatial, environmental, and satellite data.
+
+For project details, repositories, and contact information, visit the portfolio website.

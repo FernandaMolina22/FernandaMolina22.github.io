@@ -116,7 +116,7 @@
 
   if (window.L) {
     const map = L.map('heroMap', {zoomControl:false, attributionControl:true, dragging:false, scrollWheelZoom:false, doubleClickZoom:false, boxZoom:false, keyboard:false, touchZoom:false}).setView([28,-34],2.35);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'&copy; OpenStreetMap contributors',maxZoom:8}).addTo(map);
+    L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',{attribution:'Map data: &copy; OpenStreetMap contributors, SRTM | Map style: &copy; OpenTopoMap',maxZoom:17}).addTo(map);
     const latlngs = journey.map(p => [p.lat,p.lng]);
     L.polyline(latlngs,{color:'#147d78',weight:1.4,opacity:.58,dashArray:'4 7'}).addTo(map);
     journey.forEach((p,i) => L.circleMarker([p.lat,p.lng],{radius:i===3?6:4,color:i===3?'#b18435':'#147d78',weight:1.4,fillColor:i===3?'#b18435':'#147d78',fillOpacity:.8}).addTo(map));

@@ -36,6 +36,45 @@
     toastTimer = setTimeout(() => toast.classList.remove('show'), 3000);
   }));
 
+
+  // QGIS project carousel: keep one media area and switch between the two visuals.
+  document.querySelectorAll('.qgis-carousel').forEach(carousel => {
+    const slides = [...carousel.querySelectorAll('.qgis-slide')];
+    const prevButton = carousel.querySelector('[data-carousel-prev]');
+    const nextButton = carousel.querySelector('[data-carousel-next]');
+    const currentLabel = carousel.querySelector('.qgis-carousel-current');
+    const totalLabel = carousel.querySelector('.qgis-carousel-total');
+    let current = 0;
+
+    if (!slides.length) return;
+    if (totalLabel) totalLabel.textContent = String(slides.length);
+
+    const showSlide = index => {
+      current = (index + slides.length) % slides.length;
+      slides.forEach((slide, i) => {
+        const active = i === current;
+        slide.classList.toggle('is-active', active);
+        slide.setAttribute('aria-hidden', String(!active));
+      });
+      if (currentLabel) currentLabel.textContent = String(current + 1);
+    };
+
+    prevButton?.addEventListener('click', () => showSlide(current - 1));
+    nextButton?.addEventListener('click', () => showSlide(current + 1));
+
+    carousel.addEventListener('keydown', event => {
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        showSlide(current - 1);
+      } else if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        showSlide(current + 1);
+      }
+    });
+
+    showSlide(0);
+  });
+
   // Make every image in Selected Work open in an accessible lightbox.
   const workImages = [...document.querySelectorAll('#work img')];
   let lastFocusedImage = null;
